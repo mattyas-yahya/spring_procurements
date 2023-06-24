@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+layout:decorate="layout">
+<head>
+<meta charset="utf-8" />
+<title>Purchase Order</title>
+
+</head>
+<body >
+
+
+<div layout:fragment="content">
+
+<div class="col-md-12">
+<div id="ioverview" class="col-md-9">
+
+</div>
+<div id="" class="col-md-12">
+    <span th:replace="purchase_order/modal_po"/>
+<span th:replace="purchase_order/modal_po_line"/>
+<span th:replace="purchase_request/modal_show_pr_line"/>
+
+
+<div>
+<div class='box-body pad'>
+<div >
+
+
+    <table   cellspacing="0" width="100%" role="grid" style="width: 82%; color: #cdcdcd00;">
+ <td>   <button style="width: 240px;" class="btn btn-danger btn-lg" id="show_table"type="button" ><b class="glyphicon glyphicon-th"></b> Table View</button> </td> 
+    <td> <button style="width: 240px;" class="btn btn-danger btn-lg" id="show_form"   type="button" ><b class="glyphicon glyphicon-edit"></b> Form View</button></td> 
+        <td>  <button style="width: 340px;" class="btn btn-info btn-lg" id=""  data-target="#modal_pr" data-toggle="modal" type="button" ><b class="glyphicon glyphicon-plus"></b>Add New Purchase Order</button></td> 
+            <td> <button style="width: 240px;" class="btn btn-info btn-lg" id="new_line"  data-target="#modal_pr_line" data-toggle="modal" type="button" ><b class="glyphicon glyphicon-plus"></b> Add New Line</button></td>   
+            <td> <button  id="labelform" class="btn btn-info btn-lg"  type="button" style="background-color: transparent;border-color: transparent;"> </button></td>   
+
+        </table>
+
+
+
+<div id="tabel_view" >
+  
+<table id="tabel_po" class="table table-striped table-bordered table-hover"  cellspacing="0"
+           width="100%" role="grid" aria-describedby="example_info"
+           style="width: 100%;">
+        <!-- Header Table -->
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>PO Number</th>
+            <th>Create Date</th>
+            <th>Created By</th>
+          
+        </tr>
+        </thead>
+
+        <!-- Footer Table -->
+    </table>
+  </div>  
+
+
+<div id="tabel_form_view"  >
+   
+    <table  class="MattBody"  cellspacing="0"
+    width="100%" role="grid" aria-describedby="example_info"
+    style="width: 100%;">
+    <tr>
+    <div class="col-xs-4">
+        <label for="nama">PO number </label> 
+        <input type="text" required="true" class="form-control"  id="po_number_line1" name="po_number_line1" placeholder="double klik di sini untuk detail PR" />
+        </div>
+    
+        <div class="col-xs-4">
+            <label for="nama">create date</label>
+            <input type="text" required="true" class="form-control"  id="create_date" name="create_date" placeholder="" readonly/>
+            </div>
+        </div>
+
+        <div class="col-xs-4">
+            <label for="nama">create by</label>
+            <input type="text" required="true" class="form-control"  id="create_by" name="create_by" placeholder="" readonly/>
+            </div>
+        </div>
+    </tr>
+    
+    </table>   
+    <div id="liner">
+        <table id="tabel_po_line" class="table table-striped table-bordered table-hover"  cellspacing="0"
+        width="100%" role="grid" aria-describedby="example_info"
+        style="width: 100%;">
+     <thead>
+     <tr>
+         <th>ID</th>
+         <th>PO Number</th>
+         <th>PR Number</th>
+         <th>Item Number</th>
+         <th>Product Name </th>
+         <th>Qty </th>
+         <th>Note  </th>
+         <th>Unit Price  </th>
+         <th>Subtotal   </th>
+         <th>UOM  </th>
+
+     </tr>
+     </thead> 
+    
+     <!-- Footer Table -->
+</table>
+      </div>
+</div>
+
+    
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<!--    <button class="btn btn-info btn-lg" type="button" aria-label="Close">Export To XLS</button>-->
+</body>
+
+</html>
+<script >
+
+$("#tabel_form_view").hide();
+$("#formview").hide();
+$("#liner").hide();
+$("#new_line").hide();
+var l = document.getElementById("labelform");
+    l.innerHTML = "<h1 style='color: black; margin-left: 183px;'>Purchase Order </h1>";
+
+$("#show_form").click(function (event)
+{
+    var l = document.getElementById("labelform");
+    l.innerHTML = "<h1 style='color: black; margin-left: 183px;'>Purchase Order Line</h1>";
+
+    $("#tabel_view").hide();
+    $("#tabel_form_view").show();
+});
+
+$("#show_table").click(function (event)
+{
+    var l = document.getElementById("labelform");
+    l.innerHTML = "<h1 style='color: black; margin-left: 183px;'>Purchase Order</h1> ";
+    $("#tabel_form_view").hide();
+    $("#tabel_view").show();
+
+});
+
+$('#create_date').daterangepicker({
+singleDatePicker: true,
+showDropdowns: true,
+locale: {
+format: 'YYYY-MM-DD'
+}
+});
+
+
+
+</script>

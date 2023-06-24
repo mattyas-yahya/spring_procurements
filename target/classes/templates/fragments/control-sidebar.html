@@ -1,0 +1,96 @@
+<!-- Create the tabs -->
+<!--<ul class="nav nav-tabs nav-justified control-sidebar-tabs">-->
+<!--    <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>-->
+<!--&lt;!&ndash;    <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>&ndash;&gt;-->
+<!--</ul>-->
+<!-- Tab panes -->
+<!--<div class="tab-content">-->
+<!--    &lt;!&ndash; Home tab content &ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="tab-pane active" >&ndash;&gt;-->
+<!--&lt;!&ndash;        <h3 class="control-sidebar-heading">Master Form</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;        <ul class="control-sidebar-menu">&ndash;&gt;-->
+<!--&lt;!&ndash;            <li>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <li>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                            <a th:href="@{~/asset}">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <i class="menu-icon fa fa-cubes bg-light-blue"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <h4 class="control-sidebar-subheading">  Asset</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </a>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                        </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <li>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                            <a th:href="@{~/OnHandStok}">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <i class="menu-icon fa fa-gear bg-light-blue"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <h4 class="control-sidebar-subheading">  OnHandStok</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </a>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                        </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <li>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <a th:href="@{~/PM}">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <i class="menu-icon fa fa-gear bg-light-blue"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <h4 class="control-sidebar-subheading">  Preventive Maintenance</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <li>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <a th:href="@{~/Departemen}">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <i class="menu-icon fa fa-home bg-light-blue"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <h4 class="control-sidebar-subheading">  Departmen</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </li>&ndash;&gt;-->
+<!--&lt;!&ndash;          <li>&ndash;&gt;-->
+<!--&lt;!&ndash;            <a th:href="@{~/Location}">&ndash;&gt;-->
+<!--&lt;!&ndash;              <i class="menu-icon fa fa-home bg-light-blue"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;              <div>&ndash;&gt;-->
+<!--&lt;!&ndash;                <h4 class="control-sidebar-subheading">  Location</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;              </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            </a>&ndash;&gt;-->
+<!--&lt;!&ndash;          </li>&ndash;&gt;-->
+<!--&lt;!&ndash;          <li>&ndash;&gt;-->
+<!--&lt;!&ndash;            <a th:href="@{~/Account}">&ndash;&gt;-->
+<!--&lt;!&ndash;              <i class="menu-icon fa fa-home bg-light-blue"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;              <div>&ndash;&gt;-->
+<!--&lt;!&ndash;                <h4 class="control-sidebar-subheading">  Account</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;              </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            </a>&ndash;&gt;-->
+<!--&lt;!&ndash;          </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <li>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <a th:href="@{~/Safety}">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <i class="menu-icon fa fa-warning bg-light-blue"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <h4 class="control-sidebar-subheading">  Safety</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </li>&ndash;&gt;-->
+<!--&lt;!&ndash;          <li>&ndash;&gt;-->
+<!--&lt;!&ndash;            <a th:href="@{~/logout}">&ndash;&gt;-->
+<!--&lt;!&ndash;              <i class="menu-icon fa  fa-power-off bg-red"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;              <div>&ndash;&gt;-->
+<!--&lt;!&ndash;                <h4 class="control-sidebar-subheading"> Logout</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;              </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            </a>&ndash;&gt;-->
+<!--&lt;!&ndash;          </li>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    </ul>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                </a>&ndash;&gt;-->
+<!--&lt;!&ndash;            </li>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        </ul>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;        &lt;!&ndash; /.control-sidebar-menu &ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--    &lt;!&ndash; /.tab-pane &ndash;&gt;-->
+<!--    &lt;!&ndash; Stats tab content &ndash;&gt;-->
+<!--    &lt;!&ndash; /.tab-pane &ndash;&gt;-->
+<!--    &lt;!&ndash; Settings tab content &ndash;&gt;-->
+<!--    &lt;!&ndash; /.tab-pane &ndash;&gt;-->
+<!--</div>-->

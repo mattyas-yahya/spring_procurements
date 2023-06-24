@@ -1,0 +1,40 @@
+<div id="modallocation" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" style="width:1500px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Location</h4>
+      </div>
+      <div class="modal-body">
+        <div class='box-body pad'>
+          <button class="btn btn-info btn-lg" id="lrefresh" type="button" ><b class="glyphicon glyphicon-refresh"></b> Refresh</button>
+          <button class="btn btn-warning btn-lg" id="ledit" type="button" ><b class="glyphicon glyphicon-pencil"></b> Select</button>
+
+          <div class="panel panel-default">
+            <table id="tabeloc" class="table table-striped table-bordered table-hover"  cellspacing="0"
+                   width="100%" role="grid" aria-describedby="example_info"
+                   style="width: 100%;">
+              <!-- Header Table -->
+              <thead>
+              <tr>
+                <th>id_location</th>
+                <th >code_location</th>
+                <th>name</th>
+
+              </tr>
+              </thead>
+
+              <!-- Footer Table -->
+            </table>
+
+            <!--<input type=hidden id="av" name="av" value=""/>-->
+            <input type=hidden id="cv" name="cv" value=""/>
+            <input type=hidden id="dv" name="dv" value=""/>
+            <input type=hidden id="ev" name="ev" value=""/>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

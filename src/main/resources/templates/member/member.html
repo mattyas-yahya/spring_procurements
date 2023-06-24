@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+layout:decorate="layout">
+<head>
+<meta charset="utf-8" />
+<title> Member</title>
+
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<section layout:fragment="header">
+<h2>
+New Member
+<small>Form Master</small>
+</h2>
+<ol class="breadcrumb">
+<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+<li class="active">Member/li>
+</ol>
+</section>
+<div layout:fragment="content">
+    <div id="info"></div>
+<div class="col-md-12">
+<div class="nav-tabs-custom">
+<ul class="nav nav-tabs">
+<li class="active"><a href="#tab_1" id="acoverview" data-toggle="tab">Overview</a></li>
+<li ><a href="#tab_2" id="mgeneral" data-toggle="tab">General</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tab_1">
+<div class='box-body pad'>
+<button class="btn btn-info btn-lg" id="mrefresh" type="button" ><b class="glyphicon glyphicon-refresh"></b> Refresh</button>
+<button class="btn btn-warning btn-lg" id="medit" type="button" ><b class="glyphicon glyphicon-pencil"></b> Edit</button>
+<button class="btn btn-success btn-lg" id="memadd" type="button" ><b class="glyphicon glyphicon-plus"></b> Add</button>
+
+<div class="panel panel-default">
+<table id="tabel_member" class="table table-striped table-bordered table-hover"  cellspacing="0"
+width="100%" role="grid" aria-describedby="example_info"
+style="width: 100%;">
+<!-- Header Table -->
+<thead>
+<tr>
+<th>id_member</th>
+<th >kode</th>
+<th>nama</th>
+<th>alamat</th>
+</tr>
+</thead>
+
+<!-- Footer Table -->
+</table>
+
+
+</div>
+</div>
+</div>
+<div class="tab-pane" id="tab_2">
+<form data-toggle="validator" id ="form_member" name ="form_member" role="form" th:object="${member}"  method="post">
+
+<div class="col-md-12">
+<div class='box-header'>
+<div class="box-body">
+
+<div class="col-md-12">
+<table class="table table-striped table-bordered table-hover" width="220%">
+<h2>Detail Information</h2>
+<tr hidden>
+<td> <div class="form-group" >
+<label for="nama">id_member</label>
+<input type="text" class="form-control" name="id_pelanggan" id="id_pelanggan" readonly />
+</div>
+</td>
+</tr>
+<tr>
+<td> <div class="form-group" >
+<label for="nama">kode</label>
+<input type="text" class="form-control" name="kode"  id="kode"  />
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="form-group">
+<label for="nama">nama</label>
+<input type="text" required="true" class="form-control"  id="nama" name="nama" />
+</div>
+</td>
+
+            <td>
+                <div class="form-group">
+                <label for="nama">alamat</label>
+                <input type="text" required="true" class="form-control"  id="alamat" name="alamat" />
+                </div>
+                </td>
+</tr>
+
+
+</table>
+
+
+
+</div>
+
+</div>
+</div>
+</div>
+<center>
+    <button class="btn btn-warning btn-lg" type="submit" name="mb1"  id="mb1" ><b class="glyphicon glyphicon-floppy-disk"></b> Save</button>
+<!--<button class="btn btn-warning btn-lg" id="edit_asset"   type="submit" value="ubah" name="action">edit</button>-->
+<!--                  <button class="btn btn-danger btn-lg"  type="submit" value="hapus" name="laction"><b class="glyphicon glyphicon-trash"></b> delete</button>-->
+</center>
+</form>    
+    </div>
+</div>
+</div>
+</div>
+</div>
+</body>
+
+</html>
+
+<script >
+$('#purchase_date').daterangepicker({
+singleDatePicker: true,
+showDropdowns: true,
+locale: {
+format: 'YYYY-MM-DD'
+}
+});
+
+$("#simpan_asset").click(function (event)
+{
+//event.stopPropagation()
+//  event.preventDefault()
+//return false;
+})
+$("#edit_asset").hide();
+$("#alertmu").fadeTo(2000, 500).slideUp(500, function()
+{
+$("#alertmu").slideUp(500);
+});
+$("#summary").hide();
+</script>

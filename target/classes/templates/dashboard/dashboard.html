@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+layout:decorate="layout">
+<head>
+<meta charset="utf-8" />
+<title>Dashboard Query Setting</title>
+
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<section layout:fragment="header">
+<h2>
+  Dashboard Query Setting
+  <small>Form Control</small>
+</h2>
+<ol class="breadcrumb">
+<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+<li class="active">Dashboard Query Setting</li>
+</ol>
+</section>
+<div layout:fragment="content">
+<div class="col-md-12">
+<div class="nav-tabs-custom">
+<ul class="nav nav-tabs">
+<li class="active"><a href="#tab_1" data-toggle="tab">Overview</a></li>
+<li ><a href="#tab_2" data-toggle="tab">General</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tab_1">
+<div class='box-body pad'>
+
+<div class="panel panel-default">
+<table id="tabelquery" class="table table-striped table-bordered table-hover"  cellspacing="0"
+width="100%" role="grid" aria-describedby="example_info"
+style="width: 100%;">
+<!-- Header Table -->
+<thead>
+<tr>
+<th></th>
+<th > name_querys</th>
+<th >  values</th>
+
+</tr>
+</thead>
+<!-- Footer Table -->
+</table>
+
+<input type=hidden id="a" name="a" value=""/>
+<input type=hidden id="b" name="b" value=""/>
+<input type=hidden id="c" name="c" value=""/>
+
+
+</div>
+</div>
+</div>
+<div class="tab-pane" id="tab_2">
+<div id="info"></div>
+<!--                  <form data-toggle="validator" id="form_dept" name="form_dept" role="form" th:object="${Departemen}" th:action="@{/d_komit}" method="post">-->
+  <form data-toggle="validator" id ="form_dashboard" role="form" th:object="${dashboard}" th:action="@{/dashboard_komit}" method="post">
+<div class="col-md-12">
+<div class='box-header'>
+<div class="box-body">
+
+<div class="col-md-6">
+<div class="form-group" >
+<label for="nama">id_dashboard</label>
+<input type="text" class="form-control" name="id_dashboard"  id="id_dashboard" readonly />
+</div>
+<div class="form-group">
+<label for="nama"> name_querys</label>
+<input type="text" required="true" class="form-control" name="name_querys" id="name_querys" />
+</div>
+<div class="form-group">
+<label for="nama"> values</label>
+<input type="text" required="true" class="form-control"  id="qvalues" name="qvalues" placeholder="Masukkan query"/>
+</div>
+
+
+                 </div>
+
+
+
+</div>
+</div>
+</div>
+                      <button class="btn btn-danger btn-lg" id="dashboard_simpan" type="submit" value="dashboard_simpan" name="dashboard_action"><b class="glyphicon glyphicon-floppy-disk"></b> Save</button>
+
+<!--<button class="btn btn-vimeo btn-md"  type="submit" value="d_ubah" name="d_action">edit</button>-->
+                        <button class="btn btn-warning btn-lg"  type="submit" value="dash_hapus" name="dash_action"><b class="glyphicon glyphicon-trash"></b> Delete</button>
+
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+
+</html>
+<script>
+$( document ).ready(function()
+{
+$(document).on("click", ".cell-which-triggers-popup", function(event)
+{
+var cell_value = $(event.target).text();
+document.getElementById("id_dept").value =  'FL-'+cell_value;
+
+showPopup(cell_value)
+});
+
+function showPopup(your_variable)
+{
+$("#popup").dialog(
+{
+width: 500,
+height: 300,
+open: function()
+{
+$(this).html("Hello " + your_variable)
+}
+});
+}
+});
+
+function adjust(obj)
+{
+if (obj.name === "B1")
+{
+document.test.action = "http://localhost:1111/DeptSave";
+return true;
+}
+if (obj.name === "B2")
+{
+document.test.action = "http://localhost:1111/DeptDelete";
+return false;
+}
+
+}
+
+</script>

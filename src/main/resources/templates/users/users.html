@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html layout:decorate="layout"
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+<head>
+<meta charset="utf-8"/>
+<title>Users</title>
+</head>
+<body onload="loading()" class="hold-transition skin-blue sidebar-mini">
+<ol class="breadcrumb">
+    <h3 class="active">Data Users</h3>
+</ol>
+<section layout:fragment="header">
+</section>
+<div layout:fragment="content">
+
+  <div id="reportrange" class="btn btn-success btn-lg">
+    <span></span> <b class="caret"></b>
+<!--    <a width="30%" type="button" id="reset" class="btn btn-block btn-info " ><i class=" glyphicon glyphicon-close"></i>Reset</a>-->
+    <button width="30%"  class="btn btn-block btn-warning"  type="button" ><i class=" glyphicon glyphicon-close"></i> Export To XLS</button>
+  </div>
+  <table width="30%" >
+    <tr></tr>
+    <tr>
+      <div></div></tr>
+    <tr></tr>
+    <tr></tr>
+  </table>
+
+<div class="col-md-12">
+<div >
+
+<div class="tab-content">
+<div class="tab-pane active" id="tab_1">
+<!--                    <div class="col-md-4">-->
+<!--                        <div class="input-daterange">-->
+<!--                            <label>Tanggal Pengerjaan<span class="required">*</span></label>-->
+<!--                            <input type="text" name="start_date" id="start_date" class="form-control" />-->
+<!--                            <label>Tanggal Selesai<span class="required">*</span></label>-->
+<!--                            <input type="text" name="end_date" id="end_date" class="form-control" />-->
+
+<!--                        </div>-->
+<!--                    </div>-->
+
+<div >
+    <div class="col-md-15" id="date_filter">
+<div class="panel panel-default">
+<table aria-describedby="example_info" cellspacing="0"
+       class="display"
+id="tabel_users" role="grid" style="width: 100%;"
+width="100%">
+<!-- Header Table -->
+<thead>
+<tr>
+<th>id</th>
+<th>email</th>
+<th>password</th>
+<th>name</th>
+<th>lastName</th>
+<th>active</th>
+<th>role</th>
+<th>link</th>
+
+</tr>
+</thead>
+<!-- Footer Table -->
+</table>
+<input id="a" name="a" type=hidden value=""/>
+<input id="b" name="b" type=hidden value=""/>
+<input id="c" name="c" type=hidden value=""/>
+<input id="d" name="d" type=hidden value=""/>
+<input id="e" name="e" type=hidden value=""/>
+<input id="f" name="f" type=hidden value=""/>
+<input id="g" name="g" type=hidden value=""/>
+<input id="h" name="h" type=hidden value=""/>
+<input id="i" name="i" type=hidden value=""/>
+<input id="j" name="j" type=hidden value=""/>
+<input id="k" name="k" type=hidden value=""/>
+<input id="l" name="l" type=hidden value=""/>
+<input id="m" name="m" type=hidden value=""/>
+<input id="n" name="n" type=hidden value=""/>
+<input id="o" name="o" type=hidden value=""/>
+<input id="p" name="p" type=hidden value=""/>
+<input id="q" name="q" type=hidden value=""/>
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</body>
+</html>
+<script type="text/javascript">
+$('#min').daterangepicker({
+singleDatePicker: true,
+showDropdowns: true,
+locale: {
+format: 'YYYY-MM-DD'
+}
+});
+$('#max').daterangepicker({
+singleDatePicker: true,
+showDropdowns: true,
+locale: {
+format: 'YYYY-MM-DD'
+}
+});
+$("#reset").click(function()
+{
+document.getElementById("min").value =  "";
+document.getElementById("max").value =  "";
+$('#tabel_log_wo').DataTable().ajax.reload();
+});
+
+
+
+
+
+ $(document).ready(function()
+          {
+
+      });
+</script>

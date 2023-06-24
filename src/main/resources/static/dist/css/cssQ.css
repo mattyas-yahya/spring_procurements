@@ -1,0 +1,54 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 23, 2018, 8:16:41 PM
+    Author     : Windows
+*/
+.customFont {
+  font-size: 0.75em;
+}
+
+.MattInput
+{
+  background-color: aliceblue;
+opacity: 1;
+height: 63px;
+border: 1000px;
+border-radius: 14px;
+font-size: 29px;
+}
+
+.Mattlabel
+{
+  font-weight: 100;
+   font-size: 20px;
+}
+
+.MattlabelSidebar
+{
+  font-weight: 100;
+   font-size: 20px;
+   border-style: revert;
+   
+
+}
+
+.MattTextArea
+{
+background-color: rgb(113, 203, 244);
+opacity: 1;
+height: 200px;
+width: 1800px;
+border: 1000px;
+border-radius: 14px;
+font-size: 29px;
+}
+
+.MattBody
+{
+  background: white;
+  border-radius: 14px;
+}

@@ -1,0 +1,95 @@
+
+
+
+<div id="moditems" class="modal fade" tabindex="-1" role="dialog">
+<div class="modal-dialog" style="width:1650px;">
+<div class="modal-content">
+
+<div class="modal-body">
+<div class="tab-content">
+<div class="box box-default">
+<div >
+<div class="box-tools pull-right">
+<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+<button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
+</div>
+</div>
+<div class="box-body">
+  <div >
+    <ul class="nav nav-tabs">
+      <li class="active"><a data-toggle="tab" id="1wo" href="#tab_1">Pekerja</a></li>
+    </ul>
+  <div class="tab-content">
+
+
+    <div class="tab-pane active" id="tab_1">
+      <div >
+        <div class="panel panel-default">
+          <div class="panel panel-default">
+            <table  class="table table-striped table-bordered table-hover"  cellspacing="0"
+                    width="50%" role="grid" aria-describedby="example_info"
+                    style="width: 50%;">
+              <tr>
+                <div class="form-group">
+                  <label for="nama"> Start Date</label>
+                  <input type="text" required="true" class="form-control" id="start_date" name="start_date" placeholder=" "/>
+                </div>
+              </tr>
+              <tr>
+                <div class="form-group">
+                  <label for="nama"> end_date</label>
+                  <input type="text" required="true"  class="form-control" id="end_date" name="end_date" placeholder=" "/>
+                </div>
+              </tr>
+              <tr>
+                <input type='button' class="btn btn-warning btn-lg" id="btn_search" value="Search">
+              </tr>
+            </table>
+            <table id="tabel_Onhand_inventory" class="table table-striped table-bordered table-hover"  cellspacing="0"
+                   width="100%" role="grid" aria-describedby="example_info"
+                   style="width: 100%;">
+              <button class="btn btn-info btn-lg" id="ohrefresh" type="button" ><b class="glyphicon glyphicon-refresh"></b> Refresh</button>
+              <button class="btn btn-warning btn-lg" id="ohedit" type="button" ><b class="glyphicon glyphicon-pencil"></b> Edit</button>
+              <button class="btn btn-success btn-lg" id="ohadd" type="button" ><b class="glyphicon glyphicon-plus"></b> Add</button>
+
+              <!-- Header Table -->
+              <thead>
+              <tr>
+                <th>idstok_card</th>
+                <th>Date</th>
+                <th>Inventory Code</th>
+                <th>price</th>
+                <th> Begin Balance </th>
+                <th>Transfer</th>
+                <th> Consume </th>
+                <th> Adjustment</th>
+                <th> End Balance</th>
+                <th> Note</th>
+              </tr>
+              </thead>
+              <tfoot>
+              <th colspan="4" style="text-align:left,font-size:90000000px"></th>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+<div class="box-footer">
+.
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+
+</script>

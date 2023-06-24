@@ -1,0 +1,90 @@
+<!-- Logo -->
+<a th:href="@{~/index/index}" class="logo">
+    <!-- mini logo for sidebar mini 50x50 pixels -->
+   <left> <span class="logo-mini"><b class="glyphicon glyphicon-send"> </b> </span></left>
+    <!-- logo for regular state and mobile devices -->
+  <span ><b class="glyphicon glyphicon-paperclip" style="margin-right: 228px;" ></b> </span>
+</a>
+<!-- Header Navbar: style can be found in header.less -->
+<nav class="navbar navbar-static-top">
+    <!-- Sidebar toggle button-->
+    <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button"><i class="glyphicon glyphicon-th"></i>
+    <!-- <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button"> -->
+    </a>
+
+    <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+
+            <li class="dropdown users users-menu">
+                <a th:href="@{~/logout}" class="dropdown-toggle" data-toggle="dropdown">
+
+                    <span class="hidden-xs" th:utext="${userName}"></span>
+                </a>
+
+            </li>
+
+<!--            <li class="dropdown notifications-menu">-->
+<!--                <a href="#" class="dropdown-toggle" data-toggle="dropdown">-->
+<!--                    <i class="glyphicon glyphicon-th"></i>-->
+<!--                    <span class="hidden-xs"> </span>-->
+<!--                </a>-->
+<!--                <ul class="dropdown-menu">-->
+<!--                    <li class="header">All Master</li>-->
+<!--                    <li>-->
+<!--                        &lt;!&ndash; inner menu: contains the actual data &ndash;&gt;-->
+<!--                        <ul class="menu">-->
+<!--                            <li>-->
+<!--                                <a th:href="@{~/asset}">-->
+<!--                                    <i class="fa fa-cubes"></i> Asset-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <a th:href="@{~/spare_part}">-->
+<!--                                    <i class="fa fa-cubes"></i> Part & Article-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <a th:href="@{~/PM}">-->
+<!--                                    <i class="fa fa-gear"></i> Preventive Maintenance-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <a th:href="@{~/Departemen}">-->
+<!--                                    <i class="fa fa-institution"></i> Departemen-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <a th:href="@{~/Safety}">-->
+<!--                                    <i class="fa fa-warning"></i> Safety-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </li>-->
+
+            <!--<li class="dropdown users users-menu">-->
+                <!--<a th:href="@{~/logout}" class="dropdown-toggle" data-toggle="dropdown">-->
+                    <!--<img th:src="@{/dist/img/boot.png}" class="users-image" alt="Users Image">-->
+                    <!--<span class="hidden-xs" >Logout</span>-->
+                <!--</a>-->
+                <!--<ul class="dropdown-menu">-->
+
+                    <!--&lt;!&ndash; Menu Footer&ndash;&gt;-->
+                    <!--<li class="users-footer">-->
+
+                        <!--<div class="pull-right">-->
+                            <!--<a th:href="@{~/logout}" class="btn btn-default btn-flat">Sign out</a>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</li>-->
+            <li>
+                <!-- <a th:href="@{~/logout}" data-toggle="control-sidebar"><i class="glyphicon glyphicon-off"></i></a> -->
+                <a type="button" class="btn btn-block btn-danger " href="/logout"><i class=" glyphicon glyphicon-off"></i></a>
+            </li>
+
+
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,86 @@
+<div id="modal_pr" class="modal fade" tabindex="-1" role="dialog">
+<div class="modal-dialog" style="width:1000px;">
+<div class="modal-content">
+
+<div class="modal-body">
+<div class="tab-content">
+<div class="box box-default">
+  <section layout:fragment="header">
+    <h2>
+    Create New Purchase Request
+    </h2>
+    
+    </section>
+<div class="box-body">
+  <div id="info"></div>
+
+  <form data-toggle="validator" role="form" name="form_pr" id="form_pr"  th:object="${purchase_request}"  method="post">
+
+    <table class="table table-striped table-bordered table-hover" >
+    <tr >
+    <div class="form-group" hidden>
+    <label for="nama">id_pr_req</label>
+    <input type="text" class="form-control"  name="id_pr_req" id="id_pr_req" readonly />
+    </div>
+    </tr >
+    <tr>
+      <div class="form-group">
+      <label for="nama">pr number</label>
+      <input type="text" required="true" class="form-control"  id="pr_number" name="pr_number" placeholder="PR-001"/>
+      </div>
+      </tr>
+    <tr>
+    <div class="form-group">
+    <label for="nama">name</label>
+    <input type="text" required="true" class="form-control"  id="name" name="name" placeholder="kaos"/>
+    </div>
+    </tr>
+    <tr>
+    <div class="form-group">
+    <label for="nama">request date</label>
+    <input type="text" required="true" class="form-control"  id="request_date" name="request_date" placeholder="request_date"/>
+    </div>
+    </tr>
+    <tr>
+      <div class="form-group">
+      <label for="nama">date required</label>
+      <input type="text" required="true" class="form-control"  id="date_required" name="date_required" placeholder="date_required"/>
+      </div>
+      </tr>
+      <tr>
+        <div class="form-group">
+        <label for="nama">departemen</label>
+        <input type="text" required="true" class="form-control"  id="departemen" name="departemen" placeholder="departemen"/>
+        </div>
+        </tr>
+        <tr>
+          <div class="form-group">
+          <label for="nama">requester</label>
+          <input type="text" required="true" class="form-control"  id="requester" name="requester" placeholder="requester"/>
+          </div>
+          </tr>
+    </table>
+    
+    <div class="box-footer">
+      
+
+    
+<button class="btn btn-info btn-lg" type="submit" name="pr1"  id="pr1" ><b class="glyphicon glyphicon-floppy-disk"></b> SUBMIT
+    </button><!--<button class="btn btn-warning btn-lg"  type="submit" value="ubah" name="action">edit</button>-->
+    
+  </div>
+    </form>
+</div>
+
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+
+</script>
